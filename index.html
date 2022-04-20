@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="View Microsoft Office Documents Online" />
+  <meta name="description" content="View Raw Documents Online" />
   <meta name="author" content="AREA44" />
-  <title>View Microsoft Office Documents</title>
+  <title>View Raw Documents</title>
   <link rel="icon" type="image/x-icon" href="./favicon.ico" />
   <link href="styles.css" rel="stylesheet" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -19,43 +19,27 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content rounded-5 shadow">
         <div class="modal-header p-5 pb-4 border-bottom-0">
-          <h2 class="fw-bold mb-0">View GitHub Documents</h2>
+          <h2 class="fw-bold mb-0">View Raw Documents</h2>
         </div>
         <div class="modal-body p-5 pt-0">
           <form>
             <div class="form-floating mb-3">
-              <input type="text" class="form-control rounded-4" id="office-url"
-                placeholder="https://github.com/AREA44/view-github-documents/blob/main/sample.docx?raw=1">
-              <label for="office-url">View Office documents</label>
+              <input type="text" class="form-control rounded-4" id="urlInput"
+                placeholder="https://github.com/AREA44/view-raw-documents/blob/main/sample.docx?raw=1">
+              <label for="urlInput">View Raw documents</label>
               <div class="form-text">
-                Example: https://github.com/AREA44/view-github-documents/blob/main/sample.docx?raw=1
+                Example: https://github.com/AREA44/view-raw-documents/blob/main/sample.docx?raw=1
               </div>
             </div>
-            <button id="office-documents" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Office documents</button>
-          </form>
-
-          <form>
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control rounded-4" id="pdf-url"
-                placeholder="https://github.com/AREA44/view-github-documents/blob/main/sample.pdf?raw=1">
-              <label for="pdf-url">View PDF documents</label>
-              <div class="form-text">
-                Example: https://github.com/AREA44/view-github-documents/blob/main/sample.pdf?raw=1
-              </div>
-            </div>
-            <button id="pdf-documents" class="w-100 mb-2 btn btn-lg rounded-4 btn-secondary" type="submit">PDF documents</button>
+            <button id="view-documents" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">View documents</button>
           </form>
         </div>
       </div>
     </div>
 </body>
 <script>
-  $("#office-documents").click(function () {
-    var url = "https://view.officeapps.live.com/op/view.aspx?src=" + $("#office-url").val();
-    window.open(url);
-  });
-  $("#pdf-documents").click(function () {
-    var url = "https://docs.google.com/viewer?url=" + $("#pdf-url").val();
+  $("#view-documents").click(function () {
+    var url = "https://docs.google.com/viewer?url=" + $("#urlInput").val();
     window.open(url);
   });
 </script>
