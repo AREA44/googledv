@@ -1,0 +1,9 @@
+<input type="text" id="text" />
+<input type="button" id="btn" value="Submit" />
+
+<script>
+  $("#btn").click(function () {
+    var url = "https://view.officeapps.live.com/op/view.aspx?src=" + $("#text").val();
+    window.open(url);
+  });
+</script>
