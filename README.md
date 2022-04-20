@@ -1,3 +1,3 @@
 # View GitHub Documents
 
-[![image](https://user-images.githubusercontent.com/27698189/164316368-6db3ac15-e77e-4320-9e4c-01ce928b4b68.png)](https://area44.github.io/view-github-documents/)
+[![image](https://user-images.githubusercontent.com/27698189/164320709-fdc9f253-d8de-4c1b-a5f6-d16f345c677f.png)](https://area44.github.io/view-github-documents/)
