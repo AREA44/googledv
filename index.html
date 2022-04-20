@@ -19,27 +19,43 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content rounded-5 shadow">
         <div class="modal-header p-5 pb-4 border-bottom-0">
-          <h2 class="fw-bold mb-0">View MS Office Documents</h2>
+          <h2 class="fw-bold mb-0">View GitHub Documents/h2>
         </div>
         <div class="modal-body p-5 pt-0">
-          <form class="">
+          <form>
             <div class="form-floating mb-3">
-              <input type="text" class="form-control rounded-4" id="urlInput"
-                placeholder="https://github.com/AREA44/view-ms-office-documents/blob/main/example.docx?raw=1">
-              <label for="urlInput">The URL</label>
+              <input type="text" class="form-control rounded-4" id="office-url"
+                placeholder="https://github.com/AREA44/view-github-documents/blob/main/sample.docx?raw=1">
+              <label for="office-url">View Office documents</label>
               <div class="form-text">
-                Example: https://github.com/AREA44/view-ms-office-documents/blob/main/example.docx?raw=1
+                Example: https://github.com/AREA44/view-github-documents/blob/main/sample.docx?raw=1
               </div>
             </div>
-            <button id="go" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Go</button>
+            <button id="office-documents" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Office documents</button>
+          </form>
+
+          <form>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control rounded-4" id="pdf-url"
+                placeholder="https://github.com/AREA44/view-github-documents/blob/main/sample.pdf?raw=1">
+              <label for="pdf-url">View Office documents</label>
+              <div class="form-text">
+                Example: https://github.com/AREA44/view-github-documents/blob/main/sample.pdf?raw=1
+              </div>
+            </div>
+            <button id="pdf-documents" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">PDF documents</button>
           </form>
         </div>
       </div>
     </div>
 </body>
 <script>
-  $("#go").click(function () {
-    var url = "https://view.officeapps.live.com/op/view.aspx?src=" + $("#urlInput").val();
+  $("#office-documents").click(function () {
+    var url = "https://view.officeapps.live.com/op/view.aspx?src=" + $("#office-url").val();
+    window.open(url);
+  });
+  $("#pdf-documents").click(function () {
+    var url = "https://view.officeapps.live.com/op/view.aspx?src=" + $("#pdf-url").val();
     window.open(url);
   });
 </script>
