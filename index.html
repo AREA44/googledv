@@ -1,47 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Google Document View - GoogleDV" />
+    <meta name="author" content="AREA44" />
+    <title>GoogleDV - Google Document Viewer</title>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="View Raw Documents Online" />
-  <meta name="author" content="AREA44" />
-  <title>View Raw Documents</title>
-  <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-  <link href="styles.css" rel="stylesheet" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-</head>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
 
-<body>
-  <div class="modal modal-signin position-static d-block bg-secondary py-5" tabindex="-1" role="dialog"
-    id="modalSignin">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content rounded-5 shadow">
-        <div class="modal-header p-5 pb-4 border-bottom-0">
-          <h2 class="fw-bold mb-0">View Raw Documents</h2>
+  <body>
+    <div class="container">
+      <h1>GoogleDV</h1>
+      <form>
+        <div class="form-control">
+          <input type="text" id="urlInput" required />
         </div>
-        <div class="modal-body p-5 pt-0">
-          <form>
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control rounded-4" id="urlInput"
-                placeholder="https://github.com/AREA44/view-raw-documents/blob/main/sample.docx?raw=1">
-              <label for="urlInput">View Raw documents</label>
-              <div class="form-text">
-                Example: https://github.com/AREA44/view-raw-documents/blob/main/sample.docx?raw=1
-              </div>
-            </div>
-            <button id="view-documents" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">View documents</button>
-          </form>
-        </div>
-      </div>
+        <button id="view-documents" class="btn" type="submit">
+          View document
+        </button>
+      </form>
     </div>
-</body>
-<script>
-  $("#view-documents").click(function () {
-    var url = "https://docs.google.com/viewer?url=" + $("#urlInput").val();
-    window.open(url);
-  });
-</script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
